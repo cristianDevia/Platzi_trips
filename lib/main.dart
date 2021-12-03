@@ -2,6 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 
+import 'package:platzi_trips_app/description_place.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -20,28 +22,7 @@ class MyApp extends StatelessWidget {
             title: Text("Reto #2 Platzi"),
             backgroundColor: Colors.pink[300],
           ),
-          body: Center(
-              child: Stack(
-            children: <Widget>[
-              Image.asset(
-                "assets/imgsnk.jpg",
-                fit: BoxFit.cover,
-                height: double.infinity,
-              ),
-              Center(
-                child: Container(
-                  height: 50.0,
-                  color: Colors.black45,
-                  child: const Center(
-                    child: Text(
-                      "shinzou wo sasageyo",
-                      style: TextStyle(color: Colors.white, fontSize: 20.0),
-                    ),
-                  ),
-                ),
-              )
-            ],
-          )),
+          body: DescriptionPlace(),
         ) //const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
