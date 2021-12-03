@@ -12,8 +12,12 @@ class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
+
   @override
   Widget build(BuildContext context) {
+    String descriptionDummy =
+        "Lorem ipsum dolor sit amet consectetur adipiscing elit auctor, sapien leo praesent etiam iaculis metus ut, consequat lacinia taciti ultrices at tellus integer. Nulla ad conubia donec senectus netus ultrices semper, metus malesuada ridiculus mollis varius himenaeos tellus, potenti habitasse natoque phasellus integer tristique.";
+
     return MaterialApp(
         title: 'Flutter Demo',
         theme: ThemeData(),
@@ -22,7 +26,7 @@ class MyApp extends StatelessWidget {
             title: Text("Reto #2 Platzi"),
             backgroundColor: Colors.pink[300],
           ),
-          body: DescriptionPlace(),
+          body: DescriptionPlace("Cancun", 4, descriptionDummy),
         ) //const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
