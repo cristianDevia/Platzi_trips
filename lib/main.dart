@@ -3,6 +3,7 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 
 import 'package:platzi_trips_app/description_place.dart';
+import 'package:platzi_trips_app/review_list.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,8 +26,14 @@ class MyApp extends StatelessWidget {
           appBar: AppBar(
             title: Text("Reto #2 Platzi"),
             backgroundColor: Colors.pink[300],
+            centerTitle: true,
           ),
-          body: DescriptionPlace("Cancun", 4, descriptionDummy),
+          body: Column(
+            children: <Widget>[
+              DescriptionPlace("Cancun", 4, descriptionDummy),
+              ReviewList()
+            ],
+          ),
         ) //const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
