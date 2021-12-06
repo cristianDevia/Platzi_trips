@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:platzi_trips_app/description_place.dart';
 import 'package:platzi_trips_app/review_list.dart';
+import 'package:platzi_trips_app/gradient_back.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,18 +24,22 @@ class MyApp extends StatelessWidget {
         title: 'Flutter Demo',
         theme: ThemeData(),
         home: Scaffold(
-          appBar: AppBar(
-            title: Text("Reto #2 Platzi"),
-            backgroundColor: Colors.pink[300],
-            centerTitle: true,
-          ),
-          body: Column(
-            children: <Widget>[
-              DescriptionPlace("Cancun", 4, descriptionDummy),
-              ReviewList()
-            ],
-          ),
-        ) //const MyHomePage(title: 'Flutter Demo Home Page'),
+            /*appBar: AppBar(
+              title: Text("Reto #2 Platzi"),
+              backgroundColor: Colors.pink[300],
+              centerTitle: true,
+            ),*/
+            body: Stack(
+          children: <Widget>[
+            ListView(
+              children: <Widget>[
+                DescriptionPlace("Bahamas", 4, descriptionDummy),
+                ReviewList()
+              ],
+            ),
+            GradientBack()
+          ],
+        )) //const MyHomePage(title: 'Flutter Demo Home Page'),
         );
   }
 }
